@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  post:
+    docker:
+      - image: alpine:3.7
+    steps:
+      # Node 12 build
+      - run: curl -X POST https://hub.docker.com/api/build/v1/source/5b3263c0-a9d9-43f3-9dd6-2a6465f7cd5e/trigger/7dfbb64f-4613-4f5b-9ba1-cd94dac2e0d0/call/
+workflows:
+  version: 2
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * 0"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - post
