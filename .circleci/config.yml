@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Node 12 build
           command: curl -X POST https://hub.docker.com/api/build/v1/source/5b3263c0-a9d9-43f3-9dd6-2a6465f7cd5e/trigger/7dfbb64f-4613-4f5b-9ba1-cd94dac2e0d0/call/
-      -run:
+      - run:
           name: Node 10 build
           command: curl -X POST https://hub.docker.com/api/build/v1/source/ab41bc6c-d6c5-4158-8a77-4cf6938ef333/trigger/17be2e76-9058-46b1-8cf4-2bb0e71d8739/call/
       - run:
