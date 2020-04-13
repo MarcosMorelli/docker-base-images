@@ -28,6 +28,3 @@ workflows:
                 - master
     jobs:
       - trigger-builds
-  pushed_source_code:
-    jobs:
-      - trigger-builds
